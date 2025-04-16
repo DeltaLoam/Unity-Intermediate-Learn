@@ -79,9 +79,9 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<Coin>(out Coin coin))
+        if (collision.gameObject.TryGetComponent<ICollectable>(out ICollectable item))
         {
-            coin.Collect();
+            item.Collect();
         }
     }
 }
