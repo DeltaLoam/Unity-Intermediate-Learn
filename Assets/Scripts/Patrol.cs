@@ -25,7 +25,6 @@ public class Patrol : State
     }
     public override void Exit()
     {
-        Agent.ResetPath();
         base.Exit();
     }
 }
